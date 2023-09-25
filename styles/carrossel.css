@@ -1,0 +1,144 @@
+.carrossel__titulo {
+    background-color: var(--branco);
+    color: var(--laranja);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding: 1em 3em 0.5em 3em;
+    text-transform: uppercase;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: 0.5em 0 1.5em 0;
+}
+
+.swiper-scrollbar {
+    display: none;
+}
+
+.recomendacoes {
+    padding: 1.1em;
+    margin: 1em 1em;
+    background-color: var(--branco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.recomendacoes__filhos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recomendacoes__escritas {
+    margin: 0 0 1em 0
+}
+
+.recomendacoes__escritas-titulo {
+    color: var(--laranja);
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.recomendacoes__escritas-livro{
+    color: var(--cor-principal-nogradient);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.recomendacoes__escritas-texto {
+    color: var(--cor-principal);
+    font-size: 14px;
+    margin: 1em 0;
+}
+
+.icones__item {
+    margin: 0 0.5em;
+
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes__icones {
+    display: flex;
+}
+
+.botao__ancora {
+    padding: 1em 2.2em;
+    background-color: var(--laranja);
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--branco);
+}
+
+@media screen and (min-width: 1024px) {
+    .carrossel__titulo {
+        font-size:26px;
+        padding: 2em 2em 1em 2em
+    }
+    
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-pagination {
+        margin: 2em 0 3em 0;
+    }
+
+    .recomendacoes {
+        width: 50%;
+        margin: 2em auto;
+    }
+
+    .recomendacoes__escritas-livro {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .carrosel__div {
+        display: flex;
+    }
+    
+    .swiper {
+        width:34%;
+        margin-top: 1em;
+        margin-bottom: 3em;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .recomendacoes {
+        margin: 3.5em 20em 3.5em 0;
+        width: 30%;
+    }
+
+    .recomendacoes__escritas-titulo {
+        font-size: 32px;
+    }
+
+    .recomendacoes__escritas-livro {
+        font-size:18px
+    }
+
+    .icones__item {
+        width:50%
+    }
+
+    
+}
