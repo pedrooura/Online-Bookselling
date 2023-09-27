@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/formulario.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration form</title>
+</head>
+
+<body>
+
+    <header class="cabeçalho">
+        <div class="conteiner">
+            <input type="checkbox" id="menu" class="conteiner__botao">
+            <label for="menu">
+                <span class="cabeçalho__menu conteiner__imagem"></span>
+                
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categories</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Coding</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Back-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+            </ul>
+            <img src=".//assets/Logo.svg" alt="logo triangular" class="conteiner__imagem">
+            <h1 class="cabeçalho__titulo"><b class="cabeçalho__titulo-negrito">Alura</b>Books</h1>
+            
+         </div>
+         <div class="conteiner">
+            
+            <div class="conteiner__lista">
+                <input type="checkbox" id="menu-tablet" class="tablet__botao">
+                <label for="menu-tablet">
+                    <li class="lista-tablet__item">Categories</li>
+                </label>
+                <ul class="lista-menu">
+                
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Coding</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Back-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+            </ul>
+            </div>
+            
+            <ul class="lista-tablet">
+                
+                <li class="lista-tablet__item"><a href="#" class="lista-tablet__link">Favorites</a></li>
+                <li class="lista-tablet__item"><a href="#" class="lista-tablet__link">My Bookcase</a></li>
+            </ul>
+            
+            <a href="#">
+                <img src=".//assets/Favoritos.svg" alt="ícone favoritos" class="conteiner__imagem image-none">
+            </a>
+            <a href="#" class="conteiner__link">
+                <img src=".//assets/Compras.png" alt="ícone de carrinho" class="conteiner__imagem">
+                 <p class="conteiner__imagem-sub">Cart</p>
+            </a>
+            <a href="#" class="conteiner__link">
+                <img src=".//assets/Usuario.png" alt="ícone de perfil" class="conteiner__imagem">
+                <p class="conteiner__imagem-sub">Profile</p>
+            </a>
+         </div>
+
+  </header>
+
+    <section class="banner">
+        <h2 class="banner__titulo">Registration screen</h2>
+    </section>
+
+    <main class="principal">
+        <h2 class="principal__titulo">Registration data</h2>
+
+        <form class="principal__formulario" id="formulario" target="_blank"
+            onsubmit="location.replace('./cadastro-finalizado.html')">
+            <h3 class="principal__subtitulo">Personal information</h3>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Full name</label>
+                <input name="nome" id="nome" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="nascimento">Date of Birth</label>
+                    <input name="nascimento" id="nascimento" type="date" class="campo__escrita" required />
+                </div>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="telefone">Contact</label>
+                    <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita"
+                        required />
+                </div>
+            </div>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="email">E-mail</label>
+                <input name="email" id="email" type="email" class="campo__escrita" required />
+            </div>
+
+            <h3 class="principal__subtitulo">Adress</h3>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="cep">CEP</label>
+                <input name="cep" id="cep" class="campo__escrita" required />
+                <div id="cepError"></div>
+            </div>
+            
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="endereco">Adress</label>
+                <input name="endereco" id="endereco" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="numero">House number</label>
+                    <input name="numero" id="numero" class="campo__escrita" required />
+                </div>
+               
+            </div>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="bairro">Neighborhood</label>
+                <input name="bairro" id="bairro" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="cidade">City</label>
+                    <input name="cidade" id="cidade" class="campo__escrita" required />
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="estado">State</label>
+                    <select id="estado" name="estado" class="campo__escrita">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <input type="submit" value="Send Form" class="formulario__botao" id="enviar">
+        </form>
+    </main>
+
+    <hr>
+    <footer class="rodape">
+        <h2 class="rodape__titulo">Team Alura</h2>
+        <ul class="rodape__lista">
+            <li class="rodape__lista-titulo">Education</li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/Caelum.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Caelum</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/CasaDoCodigo.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Code House</a>
+            </li>
+        </ul>
+        <ul class="rodape__lista">
+            <li class="rodape__lista-titulo">Online Education</li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/Alura.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Alura</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/AluraEmpresas.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Alura for Business</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/AluraLATAM.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Alura LATAM</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/AluraStart.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Alura Start</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/MusicDot.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">MusicDot</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/AluraLingua.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Alura Língua</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/PM3.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">PM3</a>
+            </li>
+        </ul>
+        <ul class="rodape__lista">
+            <li class="rodape__lista-titulo">Community</li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/HipstersTech.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Hipsters Tech</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/ScubaDev.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Sucuba Dev</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/LayersTech.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Layers Tech</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/CarreiraSemFronteira.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Carrer without borders</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/HipstersJobs.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Hipster Jobs</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/LikeABoss.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">Like a Boss</a>
+            </li>
+            <li class="rodape__lista-item">
+                <img src=".//assets/imagens footer/GUJ.svg" alt="Caelum icone">
+                <a href="#" class="rodape__lista-link">GUJ</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script-form.js" ></script>
+</body>
+
+</html>

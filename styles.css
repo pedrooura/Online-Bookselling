@@ -76,6 +76,11 @@
     text-transform: uppercase;
 }
 
+#cepError {
+    color: red;
+    padding: 0.5em;
+}
+
 /* configurando compatibilidade de midias */
 
 .cabeçalho__titulo, .lista-tablet, .menu__tablet, .lista-tablet__item, .tablet__botao{
